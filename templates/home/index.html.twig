@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <h1>Bienvenue {{ app.user.pseudo }}</h1> <!-- Pour faire appel à l'entité User de l'utilisateur connecté, on se sert de app.user !! IMPORTANT !! Si je veux y faire appel dans une entité il faudra écrire $this->user, il comprendra qu'il s'agit de l'utilisateur connecté-->
+    <p>{{ app.user.email }}</p>
+{% endblock %}
